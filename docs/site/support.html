@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hỗ trợ Open Book</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="index.html">Open Book</a><a href="privacy.html">Quyền riêng tư</a><a href="#en">English</a></nav>
+<h1>Hỗ trợ</h1>
+<p class="meta">App Open Book</p>
+<p>Báo lỗi, góp ý bản dịch hay đề nghị thêm sách: mở một mục trên <a id="issues" href="#">trang góp ý của dự án</a> (cần tài khoản GitHub miễn phí).</p>
+<p>Khi báo lỗi, xin ghi tên sách, chương, đoạn văn và dòng máy (iPhone hay iPad), phiên bản iOS.</p>
+<h2>Câu hỏi thường gặp</h2>
+<p><strong>Bản dịch do ai làm?</strong> Bản dịch tiếng Việt được dịch riêng cho app bằng AI rồi soát lại, không lấy từ bản dịch đã xuất bản. Nếu thấy chỗ dịch chưa đúng, xin báo để sửa.</p>
+<p><strong>Sách có bản quyền không?</strong> Mọi tác phẩm, bản dịch tiếng Anh và tranh minh họa trong app đã hết thời hạn bảo hộ ở Mỹ và Việt Nam. Danh sách nguồn và họa sĩ có trong app, mục Cài đặt › Giới thiệu và giấy phép.</p>
+<p><strong>Giọng đọc nghe chưa hay?</strong> Tiếng Việt có 4 giọng (Adam, Mai Anh, Trúc Ly, Anh Khôi), chọn trong Cài đặt của app. Với tiếng Anh, tải giọng chất lượng cao hơn trong Cài đặt › Trợ năng › Nội dung được đọc › Giọng nói, rồi chọn giọng đó trong Cài đặt của app.</p>
+<p><strong>Xoá app hoặc đổi máy có mất từ đã lưu không?</strong> Không, nếu máy đăng nhập iCloud: từ đã lưu, lịch ôn, chỗ đang đọc và cài đặt được đồng bộ qua iCloud của bạn; cài lại app với cùng Apple ID là có lại, có khi sau vài phút. Sách đã mua của gói Học nâng cao cũng mở lại theo Apple ID (Cài đặt › Khôi phục giao dịch mua nếu cần); app tải lại sách khi bạn mở.</p>
+<div class="lang" id="en" lang="en">
+<h1>Support</h1>
+<p>To report a bug, suggest a translation fix or request a book, open an issue on the <a class="issues2" href="#">project’s feedback page</a> (a free GitHub account is needed). Please include the book, chapter, passage, device and iOS version.</p>
+</div>
+</main>
+<script>
+  // Trang góp ý: suy ra từ địa chỉ GitHub Pages (<tài khoản>.github.io/<repo>/).
+  (function () {
+    var user = location.hostname.split(".")[0];
+    var repo = location.pathname.split("/").filter(Boolean)[0];
+    if (!location.hostname.endsWith("github.io") || !repo) return;
+    var url = "https://github.com/" + user + "/" + repo + "/issues";
+    document.querySelectorAll("#issues, .issues2").forEach(function (a) { a.href = url; });
+  })();
+</script>
+</body>
+</html>

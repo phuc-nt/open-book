@@ -1,0 +1,18 @@
+:root {
+  --bg: #fbf8f2; --fg: #2a2620; --muted: #6b6358; --accent: #6236a0; --line: #e4ddd0; --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #1b1916; --fg: #ece6db; --muted: #a59d90; --accent: #a98be0; --line: #3a352e; --card: #24211d; }
+}
+:root[data-theme="dark"] { --bg: #1b1916; --fg: #ece6db; --muted: #a59d90; --accent: #a98be0; --line: #3a352e; --card: #24211d; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 Georgia, "Times New Roman", serif; }
+main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+.lang { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 24px; }
+nav { font: 15px system-ui, sans-serif; margin-bottom: 32px; display: flex; gap: 16px; flex-wrap: wrap; }
